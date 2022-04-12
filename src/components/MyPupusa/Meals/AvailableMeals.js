@@ -9,7 +9,7 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch();
+      const response = await fetch('https://movieserp-default-rtdb.firebaseio.com/pupusas.json');
 
       if (!response.ok) {
         throw new Error("error obtaining information about the meals");
