@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import Input from "../../UI/Input";
-import classes from "./MetalItemForm.module.css";
+import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
@@ -14,12 +14,12 @@ const MealItemForm = (props) => {
     if (
       enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
-      enteredAmmountNumber > 5
+      enteredAmountNumber > 5
     ) {
       setAmountIsValid(false);
       return;
     }
-    props.onAddToCart(enteredAmmountNumber);
+    props.onAddToCart(enteredAmountNumber);
   };
 
   return (
