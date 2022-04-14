@@ -7,9 +7,9 @@ import Checkout from "./Checkout";
 
 const Cart = (props) => {
   const pruebaData = {
-    "ordersDate": "26-09-2021",
+    "ordersDate": "20-04-2022",
     "ordersStatus": "ON KITCHEN",
-    "ordersDelivaddress": "Comunidad El Pino",
+    "ordersDelivaddress": "San Salvador, El Salvador",
     "idPayment": "1",        
     "idUser": "1"
   };
@@ -39,7 +39,7 @@ const Cart = (props) => {
    // await fetch("http://localhost:8080/api/orders", {  
       credentials: "include",    
       method: "POST",
-      body: JSON.stringify(pruebaData),
+      //body: JSON.stringify(pruebaData),
       /*
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const Cart = (props) => {
       */
        headers: {'Access-Control-Allow-Origin': "https://movieserp-default-rtdb.firebaseio.com/orders.json"},
       BODY: JSON.stringify({
-        user: userData,
+        user: pruebaData,
         orderedItems: cartCtx.items,
       }),
     });
