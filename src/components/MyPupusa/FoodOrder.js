@@ -18,6 +18,7 @@ const FoodOrder = () => {
   return (
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
+      {/* stackoverflow <Cart onClose={hideCartHandler} visible={cartIsShown} /> */}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
